@@ -13,6 +13,7 @@ pipeline {
         stage('Clone') {
             steps {
                 container('python'){
+                    checkout 'develop'
                     sh 'ls -al'
                 }
             }
