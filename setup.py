@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-__version__ = "7.1.0"
+__version__ = "7.1.1"
 
 setup(
    name="my-package",
