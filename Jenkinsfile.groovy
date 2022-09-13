@@ -3,18 +3,16 @@ pipeline {
         kubernetes {
             containerTemplate{
                 name 'python-build'
-                image 'python:3.6-slim'
+                image 'illacast/jenkins-agent:0.1.0'
                 command 'sleep'
                 args '99d'
             }
         }
     }
     stages {
-        stage('Clone') {
+        stage('Build and deploy') {
             steps {
                 container('python-build'){
-                    sh 'pip install python-semantic-release'
-                    sh 'apt install git'
                     sh 'semantic-release publish -D version_variable=setup.py:__version__ -D branch=develop -D commit_parser=semantic_release.history.scipy_parser'
                 }
             }
