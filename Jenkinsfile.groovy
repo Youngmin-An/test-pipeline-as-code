@@ -2,7 +2,7 @@ pipeline {
     agent {
         kubernetes {
             containerTemplate{
-                name 'python'
+                name 'python-build'
                 image 'python:3.6-slim'
                 command 'sleep'
                 args '99d'
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                container('python'){
+                container('python-build'){
                     sh 'ls -al'
                 }
             }
