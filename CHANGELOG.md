@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v7.2.0 (2022-09-13)
+
+
 ## v7.1.1 (2022-09-13)
 ### Fix
 * Ee ([`20cdf6d`](https://github.com/Youngmin-An/test-pipeline-as-code/commit/20cdf6dac8381b02d3861f0cd355307aa4b1be6c))
