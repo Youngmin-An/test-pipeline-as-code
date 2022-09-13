@@ -14,9 +14,8 @@ pipeline {
             steps {
                 container('python-build'){
                     sh 'pip install python-semantic-release'
-                    sh 'ls -al'
-                    sh 'echo $PATH'
-                    //sh 'semantic-release publish -D version_variable=setup.py:__version__ -D branch=develop -D commit_parser=semantic_release.history.scipy_parser'
+                    sh 'apt install git'
+                    sh 'semantic-release publish -D version_variable=setup.py:__version__ -D branch=develop -D commit_parser=semantic_release.history.scipy_parser'
                 }
             }
         }
